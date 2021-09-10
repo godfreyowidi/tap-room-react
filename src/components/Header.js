@@ -2,7 +2,16 @@ import React from "react";
 
 function Header() {
   return (
-    <h3>Keg City</h3>
+    <header className = "row block center">
+      <div>
+        <a href='#/'>
+          <h2>Keg City</h2>
+        </a>
+      </div>
+      <div>
+        <a href = "#/cart">Cart</a> <a href = "#/signin">SignIn</a>
+      </div>
+    </header>
   );
 }
 
