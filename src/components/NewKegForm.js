@@ -10,9 +10,14 @@ function NewKegForm(props) {
   }
   return (
     <React.Fragment>
-      <ReusableForm
-        formSubmissionHandler = {handleNewKegFormSubmission}
-        buttonText = 'Add!' />
+      <main className = "block col-2">
+        <h3>Add Keg</h3>
+        <div className = "row"></div>
+      </main>
+        <ReusableForm
+          formSubmissionHandler = {handleNewKegFormSubmission}
+          buttonText = 'Add to Cart!' />
+        
     </React.Fragment>
   );
 }
