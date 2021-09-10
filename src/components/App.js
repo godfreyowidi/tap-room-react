@@ -1,8 +1,11 @@
 import React from "react";
+import Header from "./Header";
 
 function App() {
   return (
-    <h4>Tap Room</h4>
+    <React.Fragment>
+      <Header />
+    </React.Fragment>
   );
 }
 
