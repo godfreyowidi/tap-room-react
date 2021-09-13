@@ -1,14 +1,13 @@
 import React from "react";
 import ReusableForm from "./ReusableForm";
 import PropTypes from "prop-types";
-import Keg from "./Keg";
 
 function EditKegForm(props) {
   const { keg } = props;
 
   function handleEditKegFormSubmission(event) {
     event.preventDefault();
-    props.onEditKeg({brand: event.target.brand.value, name: event.target.name.value, alcoholContent: event.target.alcoholContent.value, price: event.target.price.value, id: keg.id() });
+    props.onEditKeg({brand: event.target.brand.value, name: event.target.name.value, price: event.target.price.value, quantity: event.target.quantity.value, id: keg.id() });
   }
 
   return (

@@ -15,12 +15,14 @@ function ReusableForm(props) {
           placeholder='Name' />--
         <input
           type='number'
-          name='alcoholContent'
-          placeholder='Alcohol Content' />--
+          name='price'
+          placeholder='Price' />--
         <input
           type='number'
-          name='price'
-          placeholder='Price' /> <br /> 
+          name='quantity'
+          min = "0"
+          placeholder='Quantity' 
+          defaultValue = {props.kegBool ? props.keg.quantity : 0} /><br />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
