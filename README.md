@@ -11,7 +11,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/godfreyowidi/tap-room-react">
-    <img src="images/keg.jpg" alt="Logo" width="80" height="80">
+    <img src="images/keg.jpg" alt="Logo" width="400" height="300">
   </a>
 
   <h3 align="center">Tap Room</h3>
