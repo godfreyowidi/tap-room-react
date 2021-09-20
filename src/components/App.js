@@ -1,12 +1,16 @@
-import React from "react";
-import Header from "./Header";
-import KegControl from "./KegControl";
+import React from 'react';
+import Header from './Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import KegControl from './KegControl';
+import Container from 'react-bootstrap/Container'
 
 function App() {
   return (
     <React.Fragment>
-      <Header />
-      <KegControl />
+      <Container>
+        <Header />
+        <KegControl />
+      </Container>
     </React.Fragment>
   );
 }

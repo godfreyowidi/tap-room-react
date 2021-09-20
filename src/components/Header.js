@@ -1,17 +1,10 @@
-import React from "react";
+import React from 'react';
 
 function Header() {
   return (
-    <header className = "row block center">
-      <div>
-        <a href='#/'>
-          <h2>Keg City</h2>
-        </a>
-      </div>
-      <div>
-        <a href = "#/cart">Cart</a> <a href = "#/signin">SignIn</a>
-      </div>
-    </header>
+    <React.Fragment>
+      <h1 style={{ textAlign: 'center', marginTop: '10vh', marginBottom: '10px' }}>Tap House</h1>
+    </React.Fragment >
   );
 }
 

@@ -1,39 +1,37 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
+
+
 
 function Keg(props) {
-  const oneKeg = {brand: props.brand, name: props.name, price: props.price, quantity: props.quantity, id: props.id}
-  
-  let subtract = "Subtract 1"
-  if (oneKeg.quantity === 0) {
-      subtract = "Out of Stock"
+
+  const kegPicker = {
+    border: '0.5px solid grey',
+    margin: '5px',
+    boxShadow: '2px 2px 2px #AF9E0C'
   }
 
   return (
     <React.Fragment>
-      <div onClick = { () => props.whenKegClicked(props.id) }>
-        <h3>{props.brand} - {props.name} - {props.price}</h3>
-        <ul>
-          <li>Quantity: {props.quantity}</li>
-          <li>ID: {props.id}</li>
-        </ul>
-        <button onClick = { () => props.kegPlus(oneKeg)}>Add 1</button>
-        <button onClick = { () => props.kegMinus(oneKeg)}>{subtract}</button>
-        <hr />
+      <div style={kegPicker} onClick={() => props.whenKegClicked(props.id)}>
+        <h3>{props.name}</h3>
+        <h5>${props.price}</h5>
+        {props.pintsRemaining === 0 &&
+          <h5>This Keg is Sold Out!</h5>
+        }
+        {/* <hr width="65%" /> */}
       </div>
     </React.Fragment>
   )
 }
 
 Keg.propTypes = {
-  brand: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  price: PropTypes.number,
-  quantity: PropTypes.number.isRequired,
+  brand: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  pintsRemaining: PropTypes.string,
   id: PropTypes.string,
-  kegPlus: PropTypes.func,
   whenKegClicked: PropTypes.func
-};
+}
 
 export default Keg;
-
